@@ -10,7 +10,7 @@ import { LanguageSelector } from "../ui/writtingPractise/LanguageSelector";
 import { ProgressPanel } from "../ui/writtingPractise/ProgressPanel";
 import { TextDisplay } from "../ui/writtingPractise/TextDisplay";
 
-function Home() {
+function Writting() {
   const hook = useWritingPractice();
   const { t } = useTranslation();
 
@@ -66,4 +66,4 @@ function Home() {
     </div>
   );
 }
-export default withAuthProtection(Home);
+export default withAuthProtection(Writting);
