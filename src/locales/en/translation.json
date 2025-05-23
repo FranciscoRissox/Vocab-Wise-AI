@@ -1,0 +1,54 @@
+{
+  "answerInput": {
+    "label": "Your Translation",
+    "placeholder": "Write your translation here..."
+  },  "chat": {
+    "system": "System",
+    "you": "You",
+    "tipsAndCorrections": "Tips and corrections",
+    "correctSentence": "Correct sentence"
+  },  "correction": {
+    "correctTranslation": "Correct Translation"
+  }, "difficulty": {
+    "label": "Difficulty",
+    "levels": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    }
+  }, "evaluate": {
+    "send": "Send",
+    "evaluating": "Evaluating..."
+  },  "progress": {
+    "title": "Progress",
+    "correct": "Correct",
+    "incorrect": "Incorrect"
+  },  "textDisplay": {
+    "translateTo": "Translate this sentence to {{language}}"
+  }, "sidebar": {
+    "title": "Settings",
+    "open": "Open settings panel",
+    "close": "Close settings panel"
+  }, "userMenu": {
+    "logout": "Logout",
+    "language": "Language",
+    "openMenu": "Open user menu"
+  },  "writingPractice": "Writing Practice",
+  "settings": "Settings",
+  "fromLanguage": "From (Source Language)",
+  "toLanguage": "To (Target Language)", "landing": {
+    "title": "Master Your Writing with AI",
+    "subtitle": "VocabWiseAI helps you improve your writing with instant corrections and smart feedback.",
+    "cta": "Join the Beta",
+    "closedBeta": "Currently in closed beta. (Limited users)",
+    "feature1": {
+      "title": "AI Writing Corrections",
+      "desc": "Write freely and receive instant feedback and corrections powered by artificial intelligence."
+    },
+    "feature2": {
+      "title": "Personalized Suggestions",
+      "desc": "Get tailored advice to enhance your grammar, vocabulary and overall fluency."
+    },
+    "footer": "All rights reserved."
+  }
+}

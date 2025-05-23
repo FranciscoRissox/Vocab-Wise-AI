@@ -1,0 +1,54 @@
+{
+  "answerInput": {
+    "label": "Sua tradução",
+    "placeholder": "Escreva sua tradução aqui..."
+  },"chat": {
+    "system": "Sistema",
+    "you": "Você",
+    "tipsAndCorrections": "Dicas e correções",
+    "correctSentence": "Frase corrigida"
+  },  "correction": {
+    "correctTranslation": "Tradução correta"
+  },  "difficulty": {
+    "label": "Dificuldade",
+    "levels": {
+      "easy": "Fácil",
+      "medium": "Média",
+      "hard": "Difícil"
+    }
+  },  "evaluate": {
+    "send": "Enviar",
+    "evaluating": "Avaliando..."
+  }, "progress": {
+    "title": "Progresso",
+    "correct": "Corretas",
+    "incorrect": "Incorretas"
+  },"textDisplay": {
+    "translateTo": "Traduza esta frase para {{language}}"
+  }, "sidebar": {
+    "title": "Configurações",
+    "open": "Abrir painel de configurações",
+    "close": "Fechar painel de configurações"
+  }, "userMenu": {
+    "logout": "Sair",
+    "language": "Idioma",
+    "openMenu": "Abrir menu de usuário"
+  }, "writingPractice": "Prática de Escrita",
+  "settings": "Configurações",
+  "fromLanguage": "De (Idioma de origem)",
+  "toLanguage": "Para (Idioma de destino)", "landing": {
+    "title": "Domine sua escrita com IA",
+    "subtitle": "O VocabWiseAI ajuda você a melhorar sua escrita com correções instantâneas e feedback inteligente.",
+    "cta": "Participar da Beta",
+    "closedBeta": "Atualmente em beta fechado. (Quantidade de usuários limitada)",
+    "feature1": {
+      "title": "Correções com IA",
+      "desc": "Escreva livremente e receba correções e feedback instantâneos com tecnologia de IA."
+    },
+    "feature2": {
+      "title": "Sugestões personalizadas",
+      "desc": "Receba recomendações personalizadas para melhorar sua gramática, vocabulário e fluência geral."
+    },
+    "footer": "Todos os direitos reservados."
+  }
+}
