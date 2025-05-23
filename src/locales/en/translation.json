@@ -50,5 +50,38 @@
       "desc": "Get tailored advice to enhance your grammar, vocabulary and overall fluency."
     },
     "footer": "All rights reserved."
+  },
+  "auth":{
+    "title": {
+      "login": "Sign In",
+      "register": "Create Account"
+    },
+    "placeholder": {
+      "fullname": "Full name",
+      "email": "Email",
+      "password": "Password"
+    },
+    "button": {
+      "login": "Sign In",
+      "register": "Register",
+      "google": "Google"
+    },
+    "alternate": {
+      "with": "or continue with"
+    },
+    "toggle": {
+      "login": "Already have an account?",
+      "register": "Don't have an account?",
+      "loginAction": "Sign In",
+      "registerAction": "Sign Up"
+    },
+    "errors":{
+      "user-not-found": "No user found with those credentials.",
+      "too-many-requests": "Too many attempts. Please try again later.",
+      "maximum-user-count-exceeded": "The maximum allowed number of users has been exceeded.",
+      "invalid-password": "Incorrect password.",
+      "invalid-email": "The email address entered is not valid.",
+      "email-already-exists": "An account with this email already exists."
+    }
   }
 }

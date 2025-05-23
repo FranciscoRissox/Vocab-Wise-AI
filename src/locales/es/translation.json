@@ -50,5 +50,38 @@
       "desc": "Recibe recomendaciones adaptadas para mejorar tu gramática, vocabulario y fluidez general."
     },
     "footer": "Todos los derechos reservados."
+  },
+  "auth":{
+      "title": {
+      "login": "Iniciar Sesión",
+      "register": "Crear Cuenta"
+    },
+    "placeholder": {
+      "fullname": "Nombre completo",
+      "email": "Correo electrónico",
+      "password": "Contraseña"
+    },
+    "button": {
+      "login": "Ingresar",
+      "register": "Registrarse",
+      "google": "Google"
+    },
+    "alternate": {
+      "with": "o continúa con"
+    },
+    "toggle": {
+      "login": "¿Ya tienes una cuenta?",
+      "register": "¿No tienes una cuenta?",
+      "loginAction": "Inicia sesión",
+      "registerAction": "Regístrate"
+    },
+    "errors":{
+      "user-not-found": "No se encontró un usuario con esas credenciales.",
+      "too-many-requests": "Demasiados intentos. Por favor, intenta de nuevo más tarde.",
+      "maximum-user-count-exceeded": "Se ha superado el número máximo de usuarios permitidos.",
+      "invalid-password": "Contraseña incorrecta.",
+      "invalid-email": "El correo electrónico ingresado no es válido.",
+      "email-already-exists": "Ya existe una cuenta con este correo electrónico."
+    }
   }
 }
