@@ -33,12 +33,7 @@ export const useWritingPractice = () => {
         },
       ]);
 
-      if (correction.corrections.length === 0) {
-        progress.registerCorrect();
-      } else {
-        progress.registerIncorrect();
-      }
-
+      progress.updateProgress(correction.progress);
       answer.reset();
       base.loadNextText();
     }

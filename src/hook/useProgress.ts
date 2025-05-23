@@ -1,22 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { callableFunctions } from "../firebase/functions";
+import type { Progress } from "../../shared/types/progress";
 
 export function useProgressTracker() {
   const [progress, setProgress] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
+  const [loading, setLoading] = useState(true);
 
-  const incrementProgress = () => {
-    setProgress((prev) => (prev < 10 ? prev + 1 : prev));
-  };
+  useEffect(() => {
+    callableFunctions.getWrittingProgress().then((res) => {
+      setProgress(res.data.progress);
+      setCorrectCount(res.data.correctCount);
+      setIncorrectCount(res.data.incorrectCount);
+      setLoading(false);
+    });
+  }, []);
 
-  const registerCorrect = () => {
-    setCorrectCount((prev) => prev + 1);
-    incrementProgress();
-  };
-
-  const registerIncorrect = () => {
-    setIncorrectCount((prev) => prev + 1);
-    incrementProgress();
+  const updateProgress = (progress: Progress) => {
+    setProgress(progress.progress);
+    setCorrectCount(progress.correctCount);
+    setIncorrectCount(progress.incorrectCount);
   };
 
   const resetProgress = () => {
@@ -29,8 +33,8 @@ export function useProgressTracker() {
     progress,
     correctCount,
     incorrectCount,
-    registerCorrect,
-    registerIncorrect,
+    updateProgress,
     resetProgress,
+    loading,
   };
 }

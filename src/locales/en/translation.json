@@ -22,7 +22,8 @@
     }
   }, "evaluate": {
     "send": "Send",
-    "evaluating": "Evaluating..."
+    "evaluating": "Evaluating...",
+    "limit":"Daily limit reached"
   },  "progress": {
     "title": "Progress",
     "correct": "Correct",

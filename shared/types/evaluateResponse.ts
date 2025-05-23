@@ -11,4 +11,5 @@ export const evaluateResponseInputSchema = z.object({
 export const evaluateResponseOutputSchema = z.object({
   corrections: z.array(z.object({ body: z.string() })),
   correctTranslation: z.string(),
+  isCorrect: z.boolean(),
 });

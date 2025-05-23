@@ -8,6 +8,7 @@ import {
   evaluateResponseOutputSchema,
 } from "../../shared/types/evaluateResponse";
 import app from ".";
+import type { Progress } from "../../shared/types/progress";
 
 const functions = getFunctions(app);
 
@@ -16,16 +17,12 @@ if (import.meta.env.DEV) {
 }
 
 export const callableFunctions = {
-  /* generateQuestion: httpsCallable<
-    {
-      languageGeneration: string;
-      difficultyLevel: string;
-      previousQuestions: string[];
-    },
-    string
-  >(functions, "generateQuestion"),*/
+  getWrittingProgress: httpsCallable<{}, Progress>(
+    functions,
+    "getWrittingProgress"
+  ),
   evaluateResponse: httpsCallable<
     Zod.infer<typeof evaluateResponseInputSchema>,
-    Zod.infer<typeof evaluateResponseOutputSchema>
-  >(functions, "evaluateResponse"),
+    Zod.infer<typeof evaluateResponseOutputSchema> & { progress: Progress }
+  >(functions, "evaluateWrittingResponse"),
 };

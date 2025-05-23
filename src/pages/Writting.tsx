@@ -62,6 +62,7 @@ function Writting() {
         <EvaluateButton
           onClick={hook.evaluateAnswer}
           disabled={hook.isEvaluating}
+          limitReached={hook.progress.value === 10}
         />
       </main>
     </div>
