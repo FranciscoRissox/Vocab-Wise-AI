@@ -6,6 +6,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   updateProfile,
+  sendEmailVerification,
 } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -42,6 +43,7 @@ function AuthForm() {
           email,
           password
         );
+        await sendEmailVerification(userCredential.user);
         updateProfile(userCredential.user, { displayName: fullname });
       }
       const goTo = searchParams.get("goTo");

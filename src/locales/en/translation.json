@@ -1,4 +1,8 @@
 {
+  "emailVerification": {
+    "title": "Hello!",
+    "message": "You need to verify your email to use the service."
+  },
   "answerInput": {
     "label": "Your Translation",
     "placeholder": "Write your translation here..."

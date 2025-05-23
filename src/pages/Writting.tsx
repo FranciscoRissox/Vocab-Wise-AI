@@ -9,6 +9,7 @@ import { EvaluateButton } from "../ui/writtingPractise/EvaluateButton";
 import { LanguageSelector } from "../ui/writtingPractise/LanguageSelector";
 import { ProgressPanel } from "../ui/writtingPractise/ProgressPanel";
 import { TextDisplay } from "../ui/writtingPractise/TextDisplay";
+import withEmailVerification from "../hoc/withEmailVerification";
 
 function Writting() {
   const hook = useWritingPractice();
@@ -66,4 +67,4 @@ function Writting() {
     </div>
   );
 }
-export default withAuthProtection(Writting);
+export default withAuthProtection(withEmailVerification(Writting));
