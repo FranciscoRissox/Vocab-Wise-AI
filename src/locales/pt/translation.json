@@ -1,4 +1,5 @@
 {
+  "limitReached": "Você atingiu seu limite diário. Volte amanhã para praticar mais!",
   "emailVerification": {
     "title": "Olá!",
     "message": "Você precisa verificar seu e-mail para usar o serviço."

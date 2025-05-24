@@ -7,6 +7,7 @@ export function useProgressTracker() {
   const [correctCount, setCorrectCount] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [showNotice, setShowNotice] = useState(false);
 
   useEffect(() => {
     callableFunctions.getWrittingProgress().then((res) => {
@@ -16,6 +17,12 @@ export function useProgressTracker() {
       setLoading(false);
     });
   }, []);
+
+  useEffect(() => {
+    if (progress === 10) {
+      setShowNotice(true);
+    }
+  }, [progress]);
 
   const updateProgress = (progress: Progress) => {
     setProgress(progress.progress);
@@ -36,5 +43,6 @@ export function useProgressTracker() {
     updateProgress,
     resetProgress,
     loading,
+    showNotice,
   };
 }

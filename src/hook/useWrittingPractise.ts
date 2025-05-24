@@ -57,6 +57,7 @@ export const useWritingPractice = () => {
       value: progress.progress,
       correctAccount: progress.correctCount,
       incorrectAccount: progress.incorrectCount,
+      showNotice: progress.showNotice,
     },
     correction: correctionState.correction,
     isEvaluating: correctionState.isEvaluating,

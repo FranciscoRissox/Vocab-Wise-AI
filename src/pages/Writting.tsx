@@ -10,6 +10,7 @@ import { LanguageSelector } from "../ui/writtingPractise/LanguageSelector";
 import { ProgressPanel } from "../ui/writtingPractise/ProgressPanel";
 import { TextDisplay } from "../ui/writtingPractise/TextDisplay";
 import withEmailVerification from "../hoc/withEmailVerification";
+import { LimitNotice } from "../ui/writtingPractise/LimitNotice";
 
 function Writting() {
   const hook = useWritingPractice();
@@ -55,15 +56,20 @@ function Writting() {
           text={hook.question.text}
           language={hook.answer.language}
         />
-        <AnswerInput
-          value={hook.answer.value}
-          onChange={hook.answer.setValue}
-        />
-        <EvaluateButton
-          onClick={hook.evaluateAnswer}
-          disabled={hook.isEvaluating}
-          limitReached={hook.progress.value === 10}
-        />
+        <form>
+          <AnswerInput
+            value={hook.answer.value}
+            onChange={hook.answer.setValue}
+          />
+
+          <EvaluateButton
+            onClick={hook.evaluateAnswer}
+            disabled={hook.isEvaluating}
+            limitReached={hook.progress.value === 10}
+          />
+        </form>
+
+        {hook.progress.showNotice && <LimitNotice />}
       </main>
     </div>
   );
