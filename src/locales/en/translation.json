@@ -86,8 +86,11 @@
       "too-many-requests": "Too many attempts. Please try again later.",
       "maximum-user-count-exceeded": "The maximum allowed number of users has been exceeded.",
       "invalid-password": "Incorrect password.",
+      "wrong-password": "Incorrect password.",
       "invalid-email": "The email address entered is not valid.",
-      "email-already-exists": "An account with this email already exists."
+      "email-already-exists": "An account with this email already exists.",
+      "invalid-credential": "Invalid credentials. Please check your email and password.",
+    "weak-password": "Weak password. It must be at least 6 characters long."
     }
   }
 }

@@ -86,8 +86,11 @@
       "too-many-requests": "Muitas tentativas. Por favor, tente novamente mais tarde.",
       "maximum-user-count-exceeded": "O número máximo de usuários permitidos foi excedido.",
       "invalid-password": "Senha incorreta.",
+      "wrong-password": "Senha incorreta.",
       "invalid-email": "O endereço de e-mail inserido não é válido.",
-      "email-already-exists": "Já existe uma conta com este e-mail."
+      "email-already-exists": "Já existe uma conta com este e-mail.",
+      "invalid-credential": "Credenciais inválidas. Verifique seu e-mail e senha.",
+    "weak-password": "Senha fraca. Deve conter pelo menos 6 caracteres."
     } 
   }
 }
