@@ -43,7 +43,9 @@ function AuthForm() {
           email,
           password
         );
-        await sendEmailVerification(userCredential.user);
+        await sendEmailVerification(userCredential.user, {
+          url: "https://vocab-wise-ai.web.app/writting",
+        });
         updateProfile(userCredential.user, { displayName: fullname });
       }
       const goTo = searchParams.get("goTo");
