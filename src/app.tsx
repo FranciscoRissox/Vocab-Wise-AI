@@ -3,10 +3,12 @@ import Writting from "./pages/Writting";
 import Login from "./pages/Login";
 import { Header } from "./ui/Header";
 import Landing from "./pages/Landing";
+import { LocalizedMeta } from "./ui/LocalizedMeta";
 
 function App() {
   return (
     <BrowserRouter>
+      <LocalizedMeta />
       <Header />
       <div className="h-full">
         <Routes>

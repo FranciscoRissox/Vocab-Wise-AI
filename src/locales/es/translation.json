@@ -92,5 +92,9 @@
        "invalid-credential": "Credenciales inválidas. Por favor, verifica tu correo y contraseña.",
     "weak-password": "Contraseña débil. Debe tener al menos seis caracteres."  
     }
+  },
+  "meta": {
+    "title": "VocabWiseAI - Mejora tu escritura con ayuda de la IA",
+    "description": "VocabWiseAI te ayuda a mejorar tu escritura con correcciones y sugerencias de inteligencia artificial. Disponible en inglés, español y portugués."
   }
 }

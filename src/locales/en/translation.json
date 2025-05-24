@@ -92,5 +92,9 @@
       "invalid-credential": "Invalid credentials. Please check your email and password.",
     "weak-password": "Weak password. It must be at least 6 characters long."
     }
+  },
+  "meta": {
+    "title": "VocabWiseAI - Practice your writing with AI",
+    "description": "VocabWiseAI helps you improve your writing with AI feedback and suggestions. Available in English, Spanish, and Portuguese."
   }
 }
