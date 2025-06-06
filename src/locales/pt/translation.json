@@ -82,6 +82,7 @@
       "registerAction": "Registrar-se"
     },
     "errors":{
+      "cancelled-popup-request":"O pop-up de login foi cancelado.",
       "user-not-found": "Nenhum usuário encontrado com essas credenciais.",
       "too-many-requests": "Muitas tentativas. Por favor, tente novamente mais tarde.",
       "maximum-user-count-exceeded": "O número máximo de usuários permitidos foi excedido.",

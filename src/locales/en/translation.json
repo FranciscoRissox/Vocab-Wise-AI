@@ -82,6 +82,7 @@
       "registerAction": "Sign Up"
     },
     "errors":{
+      "cancelled-popup-request":"Sign in intent was cancelled.",
       "user-not-found": "No user found with those credentials.",
       "too-many-requests": "Too many attempts. Please try again later.",
       "maximum-user-count-exceeded": "The maximum allowed number of users has been exceeded.",
