@@ -10,7 +10,7 @@ export function useProgressTracker() {
   const [showNotice, setShowNotice] = useState(false);
 
   useEffect(() => {
-    callableFunctions.getWrittingProgress().then((res) => {
+    callableFunctions.getWritingProgress().then((res) => {
       setProgress(res.data.progress);
       setCorrectCount(res.data.correctCount);
       setIncorrectCount(res.data.incorrectCount);

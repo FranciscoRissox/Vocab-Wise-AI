@@ -46,11 +46,15 @@ function Writting() {
         <ProgressPanel
           current={hook.progress.value}
           total={10}
-          correct={hook.progress.correctAccount}
-          incorrect={hook.progress.incorrectAccount}
+          correct={hook.progress.correctCount}
+          incorrect={hook.progress.incorrectCount}
         />
 
-        <ChatHistory history={hook.history} />
+        <ChatHistory
+          history={hook.history}
+          handleScroll={hook.handleScroll}
+          isLoading={hook.isLoadingHistory}
+        />
 
         <TextDisplay
           text={hook.question.text}

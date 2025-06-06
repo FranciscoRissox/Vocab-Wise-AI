@@ -3,12 +3,10 @@ import {
   getFunctions,
   httpsCallable,
 } from "firebase/functions";
-import {
-  evaluateResponseInputSchema,
-  evaluateResponseOutputSchema,
-} from "../../shared/types/evaluateResponse";
+import { evaluateResponseInputSchema } from "../../shared/types/evaluateResponse";
 import app from ".";
 import type { Progress } from "../../shared/types/progress";
+import type { WritingInteraction } from "../../shared/types/interaction";
 
 const functions = getFunctions(app);
 
@@ -17,12 +15,20 @@ if (import.meta.env.DEV) {
 }
 
 export const callableFunctions = {
-  getWrittingProgress: httpsCallable<{}, Progress>(
+  getWritingProgress: httpsCallable<{}, Progress>(
     functions,
-    "getWrittingProgress"
+    "getWritingProgress"
   ),
+  getWritingResponseHistory: httpsCallable<
+    { offset: number | null; firstLoading?: boolean },
+    {
+      writingResponses: WritingInteraction[];
+      nextOffset: number;
+      total?: number;
+    }
+  >(functions, "getWritingResponseHistory"),
   evaluateResponse: httpsCallable<
     Zod.infer<typeof evaluateResponseInputSchema>,
-    Zod.infer<typeof evaluateResponseOutputSchema> & { progress: Progress }
-  >(functions, "evaluateWrittingResponse"),
+    WritingInteraction & { progress: Progress }
+  >(functions, "evaluateWritingResponse"),
 };

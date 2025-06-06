@@ -1,4 +1,10 @@
 {
   "indexes": [],
-  "fieldOverrides": []
+  "fieldOverrides": [
+    {
+      "collectionGroup": "responses",
+      "fieldPath": "createdAt",
+      "order": "DESCENDING"
+    }
+  ]
 }
