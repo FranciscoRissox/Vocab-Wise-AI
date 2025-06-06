@@ -39,37 +39,43 @@ function Writting() {
       </Sidebar>
 
       <main className="flex-1 max-w-2xl mx-auto space-y-6">
-        <h2 className="text-2xl font-bold text-gray-800">
-          {t("writingPractice")}
-        </h2>
+        <div className="hidden md:block">
+          <h2 className="text-2xl font-bold text-gray-800">
+            {t("writingPractice")}
+          </h2>
+        </div>
 
         <ProgressPanel
           current={hook.progress.value}
           total={10}
           correct={hook.progress.correctCount}
           incorrect={hook.progress.incorrectCount}
+          className="mt-10"
         />
 
         <ChatHistory
           history={hook.history}
           handleScroll={hook.handleScroll}
           isLoading={hook.isLoadingHistory}
+          className="h-60"
         />
 
         <TextDisplay
           text={hook.question.text}
           language={hook.answer.language}
         />
-        <form>
+        <form className="flex gap-2  w-full">
           <AnswerInput
             value={hook.answer.value}
             onChange={hook.answer.setValue}
+            className="w-3/4"
           />
 
           <EvaluateButton
             onClick={hook.evaluateAnswer}
             disabled={hook.isEvaluating}
             limitReached={hook.progress.value === 10}
+            className="w-1/4"
           />
         </form>
 

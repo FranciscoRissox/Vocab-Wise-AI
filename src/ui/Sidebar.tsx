@@ -69,7 +69,7 @@ export function Sidebar({ children }: SidebarProps) {
       {!isOpen && !isDesktop && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed top-20 left-4 z-50 flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 shadow-md rounded-full text-gray-800 hover:bg-blue-50 hover:border-blue-400 transition-colors"
+          className="fixed top-32 left-1 z-50 flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 shadow-md rounded-full text-gray-800 hover:bg-blue-50 hover:border-blue-400 transition-colors"
           aria-label={t("sidebar.open")}
         >
           <span className="text-blue-600">⚙️</span>

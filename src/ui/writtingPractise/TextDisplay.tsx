@@ -4,13 +4,14 @@ import type { Languages } from "../../../shared/types/languages";
 interface Props {
   text: string;
   language: Languages;
+  className?: string;
 }
 
-export const TextDisplay = ({ text, language }: Props) => {
+export const TextDisplay = ({ text, language, className }: Props) => {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div className={className}  >
       <p className="text-lg font-medium text-gray-800">
         {t("textDisplay.translateTo", { language })}
       </p>

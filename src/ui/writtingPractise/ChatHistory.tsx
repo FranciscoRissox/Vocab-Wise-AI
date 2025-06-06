@@ -1,21 +1,20 @@
-import { useEffect, useRef } from "preact/hooks";
 import type { WritingInteraction } from "../../../shared/types/interaction";
-import { AnimatePresence, motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
 import { ChatContainer } from "../components/chat/ChatContainer";
 
 interface Props {
   history: WritingInteraction[];
   handleScroll: () => any;
   isLoading: boolean;
+    className?: string;
 }
 
-export const ChatHistory = ({ history, handleScroll, isLoading }: Props) => {
+export const ChatHistory = ({ history, handleScroll, isLoading, className }: Props) => {
   return (
     <ChatContainer
       history={history}
       handleScroll={handleScroll}
       isLoading={isLoading}
+      className={className}
     />
   );
 };

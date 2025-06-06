@@ -7,9 +7,10 @@ interface ChatContainerProps {
   history: WritingInteraction[];
   handleScroll: () => void;
   isLoading: boolean;
+  className?: string;
 }
 
-export const ChatContainer = ({ history, handleScroll, isLoading }: ChatContainerProps) => {
+export const ChatContainer = ({ history, handleScroll, isLoading, className }: ChatContainerProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const endRef = useRef<HTMLDivElement>(null);
   const prevScrollHeight = useRef<number>(0);
@@ -63,7 +64,7 @@ export const ChatContainer = ({ history, handleScroll, isLoading }: ChatContaine
   return (
     <div
       ref={containerRef}
-      className="h-90 overflow-y-auto rounded-md p-4 space-y-4 bg-white shadow-inner"
+      className= {`overflow-y-auto rounded-md p-4 space-y-4 bg-white shadow-inner ${className || ""}`}
       style={{
         pointerEvents: isLoading ? "none" : "",
         opacity: isLoading ? 0.5 : 1,
