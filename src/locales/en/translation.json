@@ -97,5 +97,10 @@
   "meta": {
     "title": "VocabWiseAI - Practice your writing with AI",
     "description": "VocabWiseAI helps you improve your writing with AI feedback and suggestions. Available in English, Spanish, and Portuguese."
-  }
+  },
+  "language": {
+    "error": {
+      "sameLanguage": "Base language and answer language cannot be the same"
+    }
+  },"save":"Save"
 }

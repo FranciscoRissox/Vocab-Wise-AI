@@ -22,9 +22,10 @@ function Writting() {
         <h3 className="text-2xl font-bold text-gray-800 mb-4">
           {t("settings")}
         </h3>
+        
         <LanguageSelector
           label={t("fromLanguage")}
-          value={hook.question.language}
+          value={hook.question.tempLanguage}
           onChange={hook.question.setLanguage}
         />
         <DifficultySelector
@@ -33,9 +34,13 @@ function Writting() {
         />
         <LanguageSelector
           label={t("toLanguage")}
-          value={hook.answer.language}
+          value={hook.answer.tempLanguage}
           onChange={hook.answer.setLanguage}
         />
+        <button className={"bg-blue-500 text-white px-4 py-2 rounded"} onClick={hook.saveLanguages}>
+          {t("save")}
+        </button>
+        {hook.settingsError && <p className="text-red-500">{t(hook.settingsError)}</p>}
       </Sidebar>
 
       <main className="flex-1 max-w-2xl mx-auto space-y-6">

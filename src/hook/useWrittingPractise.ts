@@ -7,12 +7,20 @@ import { useProgressTracker } from "./useProgress";
 import { callableFunctions } from "../firebase/functions";
 import type { WritingInteraction } from "../../shared/types/interaction";
 import { convertToTimestamp } from "../utils";
+import { Languages } from "../../shared/types/languages";
+import type { Difficulty } from "../../shared/types/difficulty";
 
 export const useWritingPractice = () => {
   const base = useBaseTexts();
   const answer = useAnswerState();
   const correction = useCorrection();
   const progress = useProgressTracker();
+  
+
+  const [settingsError, setSettingsError] = useState("")
+  const [tempLanguage1,setTempLanguage1] = useState(base.language)
+  const [tempLanguage2,setTempLanguage2] = useState(answer.language)
+  const [tempDifficulty, setTempDifficulty] = useState(base.difficulty)
 
   const [history, setHistory] = useState<WritingInteraction[]>([]);
   const [isLoadingHistory, setIsLoadingHistory] = useState(false);
@@ -53,15 +61,25 @@ export const useWritingPractice = () => {
       window.innerHeight + window.scrollY >= document.body.offsetHeight;
 
     if (reachedBottom) {
-      // const firstDate =
-      //  history.length > 0 ? history[history.length - 1].createdAt : null;
+     
       fetchNextHistoryPage();
     }
   };
 
   useEffect(() => {
     fetchNextHistoryPage();
-  }, []); // fetch inicial
+  }, []);
+
+  const saveLanguages = () => {
+   if(tempLanguage1===tempLanguage2){
+    setSettingsError("language.error.sameLanguage");
+    return;
+   }
+   setSettingsError("")
+   base.setDifficulty(tempDifficulty)
+   base.setLanguage(tempLanguage1);
+   answer.setLanguage(tempLanguage2);
+  };
 
   const evaluateAnswer = useCallback(async () => {
     const result = await correction.evaluate({
@@ -90,14 +108,17 @@ export const useWritingPractice = () => {
       text: base.currentText,
       language: base.language,
       difficulty: base.difficulty,
-      setLanguage: base.setLanguage,
-      setDifficulty: base.setDifficulty,
+      setLanguage: (l:Languages)=>setTempLanguage1(l),
+      setDifficulty: (d:Difficulty)=>setTempDifficulty(d),
+      tempLanguage:tempLanguage1,
+      tempDifficulty:tempDifficulty
     },
     answer: {
       value: answer.value,
       language: answer.language,
       setValue: answer.setValue,
-      setLanguage: answer.setLanguage,
+      setLanguage: (l:Languages)=>setTempLanguage2(l),
+      tempLanguage:tempLanguage2
     },
     progress: {
       value: progress.progress,
@@ -112,5 +133,7 @@ export const useWritingPractice = () => {
     history,
     handleScroll,
     isLoadingHistory,
+    saveLanguages,
+    settingsError
   };
 };

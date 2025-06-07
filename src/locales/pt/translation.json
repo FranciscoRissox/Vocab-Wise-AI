@@ -97,5 +97,10 @@
   "meta": {
     "title": "VocabWiseAI - Melhore sua escrita com ajuda da IA",
     "description": "VocabWiseAI ajuda você a melhorar sua escrita com correções e sugestões da inteligência artificial. Disponível em inglês, espanhol e português."
-  }
+  },
+  "language": {
+    "error": {
+      "sameLanguage": "Língua base e língua de resposta não podem ser as mesmas"
+    }
+  },"save":"Salvar"
 }
