@@ -24,7 +24,8 @@
   }, "evaluate": {
     "send": "Send",
     "evaluating": "Evaluating...",
-    "limit":"Daily limit reached"
+    "limit":"Daily limit reached",
+    "emptyAnswer":"Answer is empty"
   },  "progress": {
     "title": "Progress",
     "correct": "Correct",

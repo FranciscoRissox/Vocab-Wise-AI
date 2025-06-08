@@ -4,7 +4,7 @@ import { useWritingPractice } from "../hook/useWrittingPractise";
 import { Sidebar } from "../ui/Sidebar";
 import { Input } from "../ui/Input";
 import { ChatHistory } from "../ui/writtingPractise/ChatHistory";
-import { EvaluateButton } from "../ui/writtingPractise/EvaluateButton";
+import { MultiButton } from "../ui/MultiButton";
 import { ProgressPanel } from "../ui/writtingPractise/ProgressPanel";
 import { TextDisplay } from "../ui/writtingPractise/TextDisplay";
 import withEmailVerification from "../hoc/withEmailVerification";
@@ -86,10 +86,23 @@ function Writting() {
             className="w-3/4"
           />
 
-          <EvaluateButton
-            onClick={hook.evaluateAnswer}
-            disabled={hook.isEvaluating}
-            limitReached={hook.progress.value === 10}
+          <MultiButton
+            conditions={[
+              {
+                condition: hook.progress.value === 10,
+                label: "evaluate.limit",disabled:true
+              },{ 
+                condition: hook.isEvaluating,
+                label: "evaluate.evaluating",disabled:true
+              },{
+                condition: hook.answer.value.trim() === "",
+                label: "evaluate.emptyAnswer",disabled:true
+              },{
+                condition: !hook.isEvaluating,
+                label: "evaluate.send",
+                onClick:hook.evaluateAnswer
+              }
+            ]}
             className="w-1/4"
           />
         </form>
