@@ -6,7 +6,7 @@ import { Input } from "../ui/Input";
 import { ChatHistory } from "../ui/writtingPractise/ChatHistory";
 import { MultiButton } from "../ui/MultiButton";
 import { ProgressPanel } from "../ui/writtingPractise/ProgressPanel";
-import { TextDisplay } from "../ui/writtingPractise/TextDisplay";
+import { Quote } from "../ui/Quote";
 import withEmailVerification from "../hoc/withEmailVerification";
 import { LimitNotice } from "../ui/LimitNotice";
 import { Select } from "../ui/Select";
@@ -75,9 +75,9 @@ function Writting() {
           className="h-[60%] mt-2 mb-2"
         />
 
-        <TextDisplay
+        <Quote
           text={hook.question.text}
-          language={hook.answer.language}
+          title={t("textDisplay.translateTo", { language:hook.answer.language })}
         />
         <form className="flex gap-2  w-full">
           <Input
