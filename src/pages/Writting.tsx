@@ -10,7 +10,7 @@ import { LanguageSelector } from "../ui/writtingPractise/LanguageSelector";
 import { ProgressPanel } from "../ui/writtingPractise/ProgressPanel";
 import { TextDisplay } from "../ui/writtingPractise/TextDisplay";
 import withEmailVerification from "../hoc/withEmailVerification";
-import { LimitNotice } from "../ui/writtingPractise/LimitNotice";
+import { LimitNotice } from "../ui/LimitNotice";
 
 function Writting() {
   const hook = useWritingPractice();
@@ -80,7 +80,7 @@ function Writting() {
           />
         </form>
 
-        {hook.progress.showNotice && <LimitNotice />}
+        {hook.progress.showNotice && <LimitNotice text={t("limitReached")}/>}
       </main>
     </div>
   );
