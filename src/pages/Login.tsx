@@ -11,7 +11,7 @@ import {
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { withRedirectIfAuth } from "../hoc/withRedirectIfAuth";
-import GradientBackground from "../ui/GradientBackground";
+import GradientBackground from "../components/GradientBackground";
 import { auth } from "../firebase/auth";
 import { useTranslation } from "react-i18next";
 

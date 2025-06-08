@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { onAuthStateChanged, type User } from "firebase/auth";
 import { useTranslation } from "react-i18next";
 import { auth } from "../firebase/auth";
-import GradientBackground from "../ui/GradientBackground";
+import GradientBackground from "../components/GradientBackground";
 
 const withEmailVerification = <P extends object>(
   WrappedComponent: React.ComponentType<P>
