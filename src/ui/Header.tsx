@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header className="w-full z-2 fixed top-0 left-0 bg-white shadow-md flex items-center justify-between
-      sm:px-4 md:px-6 lg:px-8
+      px-2
       h-12 sm:h-14 md:h-16 lg:h-20
       py-2 sm:py-3 md:py-4 lg:py-5
       text-sm sm:text-base md:text-lg lg:text-xl

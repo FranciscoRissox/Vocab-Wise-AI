@@ -17,7 +17,7 @@ function Writting() {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-6xl mx-auto p-6 flex">
+    <div className="w-full p-6 flex">
       <Sidebar>
         <h3 className="text-2xl font-bold text-gray-800 mb-4">
           {t("settings")}
@@ -43,12 +43,8 @@ function Writting() {
         {hook.settingsError && <p className="text-red-500">{t(hook.settingsError)}</p>}
       </Sidebar>
 
-      <main className="flex-1 max-w-2xl mx-auto space-y-6">
-        <div className="hidden md:block">
-          <h2 className="text-2xl font-bold text-gray-800">
-            {t("writingPractice")}
-          </h2>
-        </div>
+      <main className="flex-1 h-[90vh] w-full sidebar:ml-[300px]  flex flex-col justify-start space-y-1 pt-2 md:pt-5 lg:pt-10 px-1 md:px-2">
+        
 
         <ProgressPanel
           current={hook.progress.value}
@@ -62,7 +58,7 @@ function Writting() {
           history={hook.history}
           handleScroll={hook.handleScroll}
           isLoading={hook.isLoadingHistory}
-          className="h-60"
+          className="h-[60%] mt-2 mb-2"
         />
 
         <TextDisplay

@@ -1,1 +1,4 @@
 @import "tailwindcss";
+@theme {
+    --breakpoint-sidebar: 1300px;
+  }

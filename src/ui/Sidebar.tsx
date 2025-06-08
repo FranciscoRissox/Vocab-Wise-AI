@@ -50,7 +50,7 @@ export function Sidebar({ children }: SidebarProps) {
             } left-0 h-full w-72 bg-white border-r border-gray-300 p-6 z-50`}
           >
             <div className="flex justify-between items-center mb-6 md:hidden">
-              <h3 className="text-lg font-semibold">{t("sidebar.title")}</h3>
+            
               <button
                 className="text-gray-600 hover:text-gray-900"
                 onClick={() => setIsOpen(false)}

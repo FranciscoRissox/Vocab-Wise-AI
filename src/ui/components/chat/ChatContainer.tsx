@@ -70,7 +70,7 @@ export const ChatContainer = ({ history, handleScroll, isLoading, className }: C
         opacity: isLoading ? 0.5 : 1,
       }}
     >
-      <AnimatePresence initial={false}>
+      <AnimatePresence initial={false} >
         {history.map((item) => (
           <Message
             key={item.id}
