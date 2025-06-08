@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useOutsideClick } from "../hook/useOutsideClick";
+import { useOutsideClick } from "../hooks/useOutsideClick";
 import { useTranslation } from "react-i18next";
 import { signOut, onAuthStateChanged, type User } from "firebase/auth";
-import { auth } from "../firebase/auth";
+import { auth } from "../../../firebase/auth";
 
 export const UserMenu = () => {
   const [open, setOpen] = useState(false);
