@@ -4,13 +4,14 @@ import { useWritingPractice } from "../hook/useWrittingPractise";
 import { Sidebar } from "../ui/Sidebar";
 import { Input } from "../ui/Input";
 import { ChatHistory } from "../ui/writtingPractise/ChatHistory";
-import { DifficultySelector } from "../ui/writtingPractise/DifficultySelector";
 import { EvaluateButton } from "../ui/writtingPractise/EvaluateButton";
-import { LanguageSelector } from "../ui/writtingPractise/LanguageSelector";
 import { ProgressPanel } from "../ui/writtingPractise/ProgressPanel";
 import { TextDisplay } from "../ui/writtingPractise/TextDisplay";
 import withEmailVerification from "../hoc/withEmailVerification";
 import { LimitNotice } from "../ui/LimitNotice";
+import { Select } from "../ui/Select";
+import { Difficulty } from "../../shared/types/difficulty";
+import { Languages } from "../../shared/types/languages";
 
 function Writting() {
   const hook = useWritingPractice();
@@ -23,19 +24,32 @@ function Writting() {
           {t("settings")}
         </h3>
         
-        <LanguageSelector
-          label={t("fromLanguage")}
+        <Select<Languages>
           value={hook.question.tempLanguage}
           onChange={hook.question.setLanguage}
+          options={Object.values(Languages).map((lang) => ({
+            value: lang,
+            label: lang,
+          }))}
+          label={t("fromLanguage")}
         />
-        <DifficultySelector
+        <Select<Difficulty>
           value={hook.question.difficulty}
           onChange={hook.question.setDifficulty}
+          options={Object.values(Difficulty).map((diff) => ({
+            value: diff,
+            label: t(`difficulty.levels.${diff}`),
+          }))}
+          label={t("difficulty.label")}
         />
-        <LanguageSelector
-          label={t("toLanguage")}
+        <Select<Languages>
           value={hook.answer.tempLanguage}
           onChange={hook.answer.setLanguage}
+          options={Object.values(Languages).map((lang) => ({
+            value: lang,
+            label: lang,
+          }))}
+          label={t("toLanguage")}
         />
         <button className={"bg-blue-500 text-white px-4 py-2 rounded"} onClick={hook.saveLanguages}>
           {t("save")}
