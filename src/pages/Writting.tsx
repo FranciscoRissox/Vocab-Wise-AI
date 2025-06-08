@@ -3,7 +3,6 @@ import { withAuthProtection } from "../hoc/withAuthProtection";
 import { useWritingPractice } from "../hook/useWrittingPractise";
 import { Sidebar } from "../ui/Sidebar";
 import { Input } from "../ui/Input";
-import { ChatHistory } from "../ui/writtingPractise/ChatHistory";
 import { MultiButton } from "../ui/MultiButton";
 import { ProgressPanel } from "../ui/writtingPractise/ProgressPanel";
 import { Quote } from "../ui/Quote";
@@ -12,6 +11,7 @@ import { LimitNotice } from "../ui/LimitNotice";
 import { Select } from "../ui/Select";
 import { Difficulty } from "../../shared/types/difficulty";
 import { Languages } from "../../shared/types/languages";
+import { Chat } from "../ui/components/chat";
 
 function Writting() {
   const hook = useWritingPractice();
@@ -68,7 +68,7 @@ function Writting() {
           className="mt-10"
         />
 
-        <ChatHistory
+        <Chat
           history={hook.history}
           handleScroll={hook.handleScroll}
           isLoading={hook.isLoadingHistory}

@@ -3,14 +3,14 @@ import type { WritingInteraction } from "../../../../shared/types/interaction";
 import { AnimatePresence } from "framer-motion";
 import { Message } from "./Message";
 
-interface ChatContainerProps {
+interface ChatProps {
   history: WritingInteraction[];
   handleScroll: () => void;
   isLoading: boolean;
   className?: string;
 }
 
-export const ChatContainer = ({ history, handleScroll, isLoading, className }: ChatContainerProps) => {
+export const Chat = ({ history, handleScroll, isLoading, className }: ChatProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const endRef = useRef<HTMLDivElement>(null);
   const prevScrollHeight = useRef<number>(0);
