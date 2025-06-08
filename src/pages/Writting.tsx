@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { withAuthProtection } from "../hoc/withAuthProtection";
 import { useWritingPractice } from "../hook/useWrittingPractise";
 import { Sidebar } from "../ui/Sidebar";
-import { AnswerInput } from "../ui/writtingPractise/AnswerInput";
+import { Input } from "../ui/Input";
 import { ChatHistory } from "../ui/writtingPractise/ChatHistory";
 import { DifficultySelector } from "../ui/writtingPractise/DifficultySelector";
 import { EvaluateButton } from "../ui/writtingPractise/EvaluateButton";
@@ -66,7 +66,7 @@ function Writting() {
           language={hook.answer.language}
         />
         <form className="flex gap-2  w-full">
-          <AnswerInput
+          <Input
             value={hook.answer.value}
             onChange={hook.answer.setValue}
             className="w-3/4"

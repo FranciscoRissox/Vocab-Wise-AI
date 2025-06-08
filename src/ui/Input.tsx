@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-export const AnswerInput = ({ value, onChange, className }: Props) => {
+export const Input = ({ value, onChange, className }: Props) => {
   const { t } = useTranslation();
 
   return (
