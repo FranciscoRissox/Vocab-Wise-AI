@@ -24,7 +24,8 @@
   },  "evaluate": {
     "send": "Enviar",
     "evaluating": "Avaliando...",
-    "limit":"Limite diário alcançado"
+    "limit":"Limite diário alcançado",
+    "emptyAnswer":"Resposta vazia"
   }, "progress": {
     "title": "Progresso",
     "correct": "Corretas",

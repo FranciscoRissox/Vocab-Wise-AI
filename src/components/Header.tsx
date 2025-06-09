@@ -1,8 +1,8 @@
-import { UserMenu } from "./UserMenu";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "../firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { UserMenu } from "../features/user/components/UserMenu";
 
 export function Header() {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { callableFunctions } from "../firebase/functions";
-import type { Progress } from "../../shared/types/progress";
+import { callableFunctions } from "../../../firebase/functions";
+import type { Progress } from "../../../../shared/types/progress";
 
 export function useProgressTracker() {
   const [progress, setProgress] = useState(0);
