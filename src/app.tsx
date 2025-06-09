@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from 'react';
 import { Header } from "./ui/Header";
-import { LocalizedMeta } from "./ui/LocalizedMeta";
+import { LocalizedMeta } from "./components/LocalizedMeta";
 
 const Writting = lazy(() => import("./pages/Writting"));
 const Login = lazy(() => import("./pages/Login"));

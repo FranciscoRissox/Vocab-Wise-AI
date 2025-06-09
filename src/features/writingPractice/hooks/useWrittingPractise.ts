@@ -4,11 +4,11 @@ import { useAnswerState } from "./useAnswerState";
 import { useCorrection } from "./useCorrection";
 import type { CorrectionResult } from "./useCorrection";
 import { useProgressTracker } from "./useProgress";
-import { callableFunctions } from "../firebase/functions";
-import type { WritingInteraction } from "../../shared/types/interaction";
-import { convertToTimestamp } from "../utils";
-import { Languages } from "../../shared/types/languages";
-import type { Difficulty } from "../../shared/types/difficulty";
+import { callableFunctions } from "../../../firebase/functions";
+import type { WritingInteraction } from "../../../../shared/types/interaction";
+import { convertToTimestamp } from "../../../utils";
+import { Languages } from "../../../../shared/types/languages";
+import type { Difficulty } from "../../../../shared/types/difficulty";
 
 export const useWritingPractice = () => {
   const base = useBaseTexts();

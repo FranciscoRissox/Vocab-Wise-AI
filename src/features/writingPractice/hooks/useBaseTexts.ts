@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "preact/hooks";
-import { Languages } from "../../shared/types/languages";
-import { Difficulty } from "../../shared/types/difficulty";
-import { Texts } from "../texts";
-import { randomInt } from "../utils";
+import { Languages } from "../../../../shared/types/languages";
+import { Difficulty } from "../../../../shared/types/difficulty";
+import { Texts } from "../../../texts";
+import { randomInt } from "../../../utils";
 
 export const useBaseTexts = () => {
   const [baseTexts, setBaseTexts] = useState<string[]>([]);

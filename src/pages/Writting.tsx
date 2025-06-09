@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { withAuthProtection } from "../hoc/withAuthProtection";
-import { useWritingPractice } from "../hook/useWrittingPractise";
 import { Sidebar } from "../ui/Sidebar";
 import { Input } from "../components/Input";
 import { MultiButton } from "../components/MultiButton";
@@ -11,7 +10,8 @@ import { LimitNotice } from "../ui/LimitNotice";
 import { Select } from "../components/Select";
 import { Difficulty } from "../../shared/types/difficulty";
 import { Languages } from "../../shared/types/languages";
-import { Chat } from "../ui/components/chat";
+import { Chat } from "../features/writingPractice/components/chat";
+import { useWritingPractice } from "../features/writingPractice/hooks/useWrittingPractise";
 
 function Writting() {
   const hook = useWritingPractice();

@@ -1,6 +1,6 @@
 import { useState } from "preact/hooks";
-import { callableFunctions } from "../firebase/functions";
-import { Languages } from "../../shared/types/languages";
+import { callableFunctions } from "../../../firebase/functions";
+import { Languages } from "../../../../shared/types/languages";
 import { useTranslation } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
