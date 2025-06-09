@@ -9,6 +9,7 @@ import { LimitNotice } from "../components/LimitNotice";
 import { Chat } from "../features/writingPractice/components/chat";
 import { useWritingPractice } from "../features/writingPractice/hooks/useWrittingPractise";
 import { ConfigSidebar } from "../features/writingPractice/components/ConfigSidebar";
+import { AnswerInput } from "../features/writingPractice/components/AnswerInput";
 
 function Writting() {
   const hook = useWritingPractice();
@@ -31,42 +32,7 @@ function Writting() {
           isLoading={hook.isLoadingHistory}
           className="h-[60%] mt-2 mb-2"
         />
-        <Quote
-          text={hook.question.text}
-          title={t("textDisplay.translateTo", { language: hook.answer.language })}
-        />
-        <form className="flex gap-2 w-full">
-          <Input
-            value={hook.answer.value}
-            onChange={hook.answer.setValue}
-            className="w-3/4"
-          />
-          <MultiButton
-            conditions={[
-              {
-                condition: hook.progress.value === 10,
-                label: "evaluate.limit",
-                disabled: true,
-              },
-              {
-                condition: hook.isEvaluating,
-                label: "evaluate.evaluating",
-                disabled: true,
-              },
-              {
-                condition: hook.answer.value.trim() === "",
-                label: "evaluate.emptyAnswer",
-                disabled: true,
-              },
-              {
-                condition: !hook.isEvaluating,
-                label: "evaluate.send",
-                onClick: hook.evaluateAnswer,
-              },
-            ]}
-            className="w-1/4"
-          />
-        </form>
+        <AnswerInput hook={hook} />
         {hook.progress.showNotice && <LimitNotice text={t("limitReached")} />}
       </main>
     </div>
