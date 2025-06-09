@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { withAuthProtection } from "../hoc/withAuthProtection";
-import { Sidebar } from "../ui/Sidebar";
+import { Sidebar } from "../components/Sidebar";
 import { Input } from "../components/Input";
 import { MultiButton } from "../components/MultiButton";
-import { ProgressPanel } from "../ui/ProgressPanel";
+import { ProgressPanel } from "../components/ProgressPanel";
 import { Quote } from "../components/Quote";
 import withEmailVerification from "../hoc/withEmailVerification";
-import { LimitNotice } from "../ui/LimitNotice";
+import { LimitNotice } from "../components/LimitNotice";
 import { Select } from "../components/Select";
 import { Difficulty } from "../../shared/types/difficulty";
 import { Languages } from "../../shared/types/languages";
